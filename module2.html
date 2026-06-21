@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Structure and Algorithm</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'DM Sans',sans-serif;background:#f8fafc}
+.card{transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.1)}
+.hero{background:linear-gradient(135deg,#800000,#a00000)}
+</style>
+</head>
+<body>
+<header class="bg-white shadow-sm">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-red-900 rounded-lg flex items-center justify-center">
+<i data-lucide="git-branch" class="text-white"></i>
+</div>
+<h1 class="font-bold text-2xl">Data Structure and Algorithm Module</h1>
+</div>
+<nav class="flex gap-6 text-sm">
+<a href="index.html">Dashboard</a>
+<a href="#">Resources</a>
+</nav>
+</div>
+</header>
+
+<!-- Module 2: Algorithm Analysis & Complexity -->
+<div class="max-w-7xl mx-auto px-6 py-8">
+    
+    <!-- Breadcrumb Navigation -->
+    <div class="flex items-center gap-2 text-sm text-gray-600 mb-6">
+        <a href="index.php" class="hover:text-red-900">Home</a>
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <a href="#" class="hover:text-red-900">Module 2</a>
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <span class="text-red-900 font-medium">Algorithm Analysis & Complexity</span>
+    </div>
+
+    <!-- Lesson Header -->
+    <div class="bg-gradient-to-r from-red-900 to-red-800 rounded-2xl p-8 mb-8 text-white">
+        <div class="flex items-start justify-between">
+            <div class="flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">Module 2</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">Analysis</span>
+                </div>
+                <h1 class="text-4xl font-bold mb-4">Algorithm Analysis & Complexity</h1>
+                <p class="text-red-100 text-lg mb-4">Learn to analyze and compare algorithms using asymptotic notations and complexity analysis</p>
+                <div class="flex items-center gap-6 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="clock" class="w-4 h-4"></i>
+                        <span>75 minutes</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="bar-chart" class="w-4 h-4"></i>
+                        <span>Intermediate</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="book-open" class="w-4 h-4"></i>
+                        <span>7 Topics</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold">0%</div>
+                <div class="text-sm text-red-100">Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Main Content Area -->
+        <div class="lg:col-span-2 space-y-6">
+            
+            <!-- Learning Objectives -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="target" class="text-red-900 w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">Learning Objectives</h2>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Understand time and space complexity in algorithm analysis</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Analyze growth of functions and their asymptotic behavior</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Master Big-O, Big-Theta, and Big-Omega notations</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Differentiate between best, average, and worst-case scenarios</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Compare and evaluate algorithm efficiency effectively</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Topic 1: Time Complexity -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic1">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Time Complexity</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Time complexity measures the computational time an algorithm requires as a function of input size. 
+                    It quantifies how the runtime scales when processing larger datasets, helping developers predict 
+                    performance and identify bottlenecks.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Why Time Complexity Matters</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4 border border-blue-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="gauge" class="text-blue-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-blue-900">Performance</h4>
+                        </div>
+                        <p class="text-sm text-blue-800">Predicts how fast algorithms run on different input sizes</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-4 border border-purple-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="maximize-2" class="text-purple-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-purple-900">Scalability</h4>
+                        </div>
+                        <p class="text-sm text-purple-800">Shows how algorithms behave as data grows</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 border border-green-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="git-compare" class="text-green-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-green-900">Comparison</h4>
+                        </div>
+                        <p class="text-sm text-green-800">Enables objective algorithm comparison</p>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Common Time Complexities</h3>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-start gap-3 p-3 bg-green-50 rounded-lg border border-green-200">
+                        <div class="font-mono font-bold text-green-700 min-w-[80px]">O(1)</div>
+                        <div>
+                            <p class="font-medium text-green-900">Constant Time</p>
+                            <p class="text-sm text-green-700">Execution time doesn't change with input size</p>
+                            <p class="text-xs text-green-600 mt-1">Example: Array access, hash table lookup</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3 bg-lime-50 rounded-lg border border-lime-200">
+                        <div class="font-mono font-bold text-lime-700 min-w-[80px]">O(log n)</div>
+                        <div>
+                            <p class="font-medium text-lime-900">Logarithmic Time</p>
+                            <p class="text-sm text-lime-700">Grows slowly, divides problem in half repeatedly</p>
+                            <p class="text-xs text-lime-600 mt-1">Example: Binary search, balanced tree operations</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
+                        <div class="font-mono font-bold text-yellow-700 min-w-[80px]">O(n)</div>
+                        <div>
+                            <p class="font-medium text-yellow-900">Linear Time</p>
+                            <p class="text-sm text-yellow-700">Grows proportionally with input size</p>
+                            <p class="text-xs text-yellow-600 mt-1">Example: Linear search, iterating through array</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3 bg-orange-50 rounded-lg border border-orange-200">
+                        <div class="font-mono font-bold text-orange-700 min-w-[80px]">O(n log n)</div>
+                        <div>
+                            <p class="font-medium text-orange-900">Linearithmic Time</p>
+                            <p class="text-sm text-orange-700">Efficient sorting complexity</p>
+                            <p class="text-xs text-orange-600 mt-1">Example: Merge sort, quicksort (average)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3 bg-red-50 rounded-lg border border-red-200">
+                        <div class="font-mono font-bold text-red-700 min-w-[80px]">O(n²)</div>
+                        <div>
+                            <p class="font-medium text-red-900">Quadratic Time</p>
+                            <p class="text-sm text-red-700">Time grows with square of input</p>
+                            <p class="text-xs text-red-600 mt-1">Example: Bubble sort, nested loops</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3 bg-purple-50 rounded-lg border border-purple-200">
+                        <div class="font-mono font-bold text-purple-700 min-w-[80px]">O(2ⁿ)</div>
+                        <div>
+                            <p class="font-medium text-purple-900">Exponential Time</p>
+                            <p class="text-sm text-purple-700">Doubles with each additional input</p>
+                            <p class="text-xs text-purple-600 mt-1">Example: Recursive fibonacci, subset generation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Complexity Chart -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*5ZLci3SuR0zM_QlZOADv8Q.jpeg" 
+                         alt="Time Complexity Chart" 
+                         class="w-full h-auto">
+                </div>
+
+                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="alert-circle" class="text-indigo-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-indigo-900 mb-1">Remember</p>
+                            <p class="text-indigo-800 text-sm">Time complexity focuses on growth rate, not exact time. An O(n) algorithm isn't necessarily slower than O(1) for small inputs - constants matter in practice!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 2: Space Complexity -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic2">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Space Complexity</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Space complexity quantifies the total memory an algorithm requires during execution. This includes 
+                    memory for input data, auxiliary variables, data structures, and recursive call stacks. Like time 
+                    complexity, it's expressed using Big O notation.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Components of Space Complexity</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg p-5 border-2 border-cyan-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-cyan-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="hard-drive" class="text-white w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-cyan-900">Fixed Space</h4>
+                        </div>
+                        <p class="text-sm text-cyan-800 mb-2">Space required for code, constants, and simple variables</p>
+                        <p class="text-xs text-cyan-700 font-medium">Independent of input size</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-5 border-2 border-teal-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="trending-up" class="text-white w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-teal-900">Variable Space</h4>
+                        </div>
+                        <p class="text-sm text-teal-800 mb-2">Space for data structures, recursion, temporary variables</p>
+                        <p class="text-xs text-teal-700 font-medium">Depends on input size</p>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Space Complexity Examples</h3>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold text-gray-900">Simple Variable Storage</h4>
+                            <span class="font-mono font-bold text-green-600">O(1)</span>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-3 mb-2">
+                            <code class="text-green-400 text-sm">
+                                int sum = 0;<br>
+                                for (int i = 0; i < n; i++) {<br>
+                                &nbsp;&nbsp;sum += arr[i];<br>
+                                }
+                            </code>
+                        </div>
+                        <p class="text-sm text-gray-600">Uses only a fixed amount of extra space regardless of input size</p>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold text-gray-900">Array Copy</h4>
+                            <span class="font-mono font-bold text-yellow-600">O(n)</span>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-3 mb-2">
+                            <code class="text-green-400 text-sm">
+                                int[] copy = new int[n];<br>
+                                for (int i = 0; i < n; i++) {<br>
+                                &nbsp;&nbsp;copy[i] = arr[i];<br>
+                                }
+                            </code>
+                        </div>
+                        <p class="text-sm text-gray-600">Space grows linearly with input size due to new array</p>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold text-gray-900">Recursive Factorial</h4>
+                            <span class="font-mono font-bold text-orange-600">O(n)</span>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-3 mb-2">
+                            <code class="text-green-400 text-sm">
+                                int factorial(int n) {<br>
+                                &nbsp;&nbsp;if (n <= 1) return 1;<br>
+                                &nbsp;&nbsp;return n * factorial(n - 1);<br>
+                                }
+                            </code>
+                        </div>
+                        <p class="text-sm text-gray-600">Call stack grows with recursion depth (n calls)</p>
+                    </div>
+                </div>
+
+                <!-- Space vs Time Tradeoff -->
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="scale" class="text-amber-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-amber-900 mb-1">Space-Time Tradeoff</p>
+                            <p class="text-amber-800 text-sm">Often you can reduce time complexity by using more space (caching, memoization) or reduce space by accepting slower algorithms. Choose based on your constraints!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 3: Growth of Functions -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Growth of Functions</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    The growth of functions describes how algorithm runtime or space requirements increase as input size grows. 
+                    Understanding growth rates helps predict which algorithm will perform better for large inputs, even if 
+                    constants make one slower for small datasets.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Comparing Growth Rates</h3>
+                
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 px-4 py-2 text-left">Complexity</th>
+                                <th class="border border-gray-300 px-4 py-2 text-center">n=10</th>
+                                <th class="border border-gray-300 px-4 py-2 text-center">n=100</th>
+                                <th class="border border-gray-300 px-4 py-2 text-center">n=1,000</th>
+                                <th class="border border-gray-300 px-4 py-2 text-center">n=10,000</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-green-50">
+                                <td class="border border-gray-300 px-4 py-2 font-mono font-bold">O(1)</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">1</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">1</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">1</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">1</td>
+                            </tr>
+                            <tr class="bg-lime-50">
+                                <td class="border border-gray-300 px-4 py-2 font-mono font-bold">O(log n)</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">3</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">7</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">10</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">13</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="border border-gray-300 px-4 py-2 font-mono font-bold">O(n)</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">10</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">100</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">1,000</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">10,000</td>
+                            </tr>
+                            <tr class="bg-orange-50">
+                                <td class="border border-gray-300 px-4 py-2 font-mono font-bold">O(n log n)</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">30</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">664</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">9,966</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">132,877</td>
+                            </tr>
+                            <tr class="bg-red-50">
+                                <td class="border border-gray-300 px-4 py-2 font-mono font-bold">O(n²)</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">100</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">10,000</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">1,000,000</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">100,000,000</td>
+                            </tr>
+                            <tr class="bg-purple-50">
+                                <td class="border border-gray-300 px-4 py-2 font-mono font-bold">O(2ⁿ)</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">1,024</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">1.27×10³⁰</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">∞</td>
+                                <td class="border border-gray-300 px-4 py-2 text-center">∞</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Growth Visualization -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200 bg-white p-4">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220307174648/graph-660x440.jpg" 
+                         alt="Growth of Functions Graph" 
+                         class="w-full h-auto">
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="trending-up" class="text-blue-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-blue-900 mb-1">Key Insight</p>
+                            <p class="text-blue-800 text-sm">For large inputs, O(log n) is vastly better than O(n), and O(n) is much better than O(n²). The difference between O(n) and O(n²) for n=10,000 is 10,000 vs 100,000,000 operations!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 4: Big-O Notation -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic4">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Big-O Notation</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Big-O notation describes the <strong>upper bound</strong> of an algorithm's growth rate. It represents 
+                    the worst-case scenario - the maximum time or space an algorithm will ever need. Big-O is the most 
+                    commonly used notation for analyzing algorithms.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Formal Definition</h3>
+                
+                <div class="bg-gray-50 border-2 border-gray-200 rounded-lg p-5 mb-6">
+                    <p class="text-gray-700 mb-3">A function f(n) is O(g(n)) if there exist positive constants c and n₀ such that:</p>
+                    <div class="bg-white rounded-lg p-4 border border-gray-300 text-center">
+                        <code class="text-xl font-mono text-red-900">0 ≤ f(n) ≤ c · g(n) for all n ≥ n₀</code>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3 italic">Translation: f(n) grows no faster than g(n) times some constant, for sufficiently large n</p>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Big-O Rules</h3>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-start gap-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">1</div>
+                        <div>
+                            <p class="font-semibold text-blue-900">Drop Constants</p>
+                            <p class="text-sm text-blue-700">O(2n) → O(n), O(5n²) → O(n²)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3 bg-purple-50 rounded-lg border border-purple-200">
+                        <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">2</div>
+                        <div>
+                            <p class="font-semibold text-purple-900">Drop Lower-Order Terms</p>
+                            <p class="text-sm text-purple-700">O(n² + n) → O(n²), O(n³ + n² + n) → O(n³)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3 bg-green-50 rounded-lg border border-green-200">
+                        <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">3</div>
+                        <div>
+                            <p class="font-semibold text-green-900">Keep Dominant Term</p>
+                            <p class="text-sm text-green-700">Focus on the term that grows fastest</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3 bg-orange-50 rounded-lg border border-orange-200">
+                        <div class="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">4</div>
+                        <div>
+                            <p class="font-semibold text-orange-900">Different Inputs → Different Variables</p>
+                            <p class="text-sm text-orange-700">Two arrays of different sizes: O(a + b) not O(n)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Practical Examples</h3>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="border-2 border-green-200 rounded-lg p-4 bg-green-50">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-green-900">Array Element Access</h4>
+                            <span class="px-3 py-1 bg-green-600 text-white rounded-full text-sm font-mono">O(1)</span>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-3">
+                            <code class="text-green-400 text-sm">
+                                int value = arr[5]; // Direct access
+                            </code>
+                        </div>
+                    </div>
+
+                    <div class="border-2 border-yellow-200 rounded-lg p-4 bg-yellow-50">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-yellow-900">Linear Search</h4>
+                            <span class="px-3 py-1 bg-yellow-600 text-white rounded-full text-sm font-mono">O(n)</span>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-3">
+                            <code class="text-green-400 text-sm">
+                                for (int i = 0; i < n; i++) {<br>
+                                &nbsp;&nbsp;if (arr[i] == target) return i;<br>
+                                }
+                            </code>
+                        </div>
+                    </div>
+
+                    <div class="border-2 border-red-200 rounded-lg p-4 bg-red-50">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-red-900">Nested Loops</h4>
+                            <span class="px-3 py-1 bg-red-600 text-white rounded-full text-sm font-mono">O(n²)</span>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-3">
+                            <code class="text-green-400 text-sm">
+                                for (int i = 0; i < n; i++) {<br>
+                                &nbsp;&nbsp;for (int j = 0; j < n; j++) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;// operation<br>
+                                &nbsp;&nbsp;}<br>
+                                }
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Big-O Complexity Chart -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200">
+                    <img src="https://cdn-media-1.freecodecamp.org/images/1*KfZYFUT2OKfjekJlCeYvuQ.jpeg" 
+                         alt="Big-O Complexity Chart" 
+                         class="w-full h-auto">
+                </div>
+            </div>
+
+            <!-- Topic 5: Big-Theta Notation -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic5">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Big-Theta (Θ) Notation</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Big-Theta notation describes the <strong>tight bound</strong> of an algorithm's growth rate. It represents 
+                    both the upper and lower bounds simultaneously - meaning the algorithm's complexity grows at exactly 
+                    this rate. Theta gives the most precise description of complexity.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Formal Definition</h3>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-300 rounded-lg p-5 mb-6">
+                    <p class="text-gray-700 mb-3">A function f(n) is Θ(g(n)) if there exist positive constants c₁, c₂, and n₀ such that:</p>
+                    <div class="bg-white rounded-lg p-4 border border-purple-300 text-center">
+                        <code class="text-xl font-mono text-purple-900">0 ≤ c₁ · g(n) ≤ f(n) ≤ c₂ · g(n) for all n ≥ n₀</code>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3 italic">Translation: f(n) is sandwiched between two multiples of g(n)</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-red-50 border-2 border-red-200 rounded-lg p-4 text-center">
+                        <div class="text-3xl font-bold text-red-600 mb-2">O</div>
+                        <p class="font-semibold text-red-900 mb-1">Upper Bound</p>
+                        <p class="text-sm text-red-700">≤ (At most)</p>
+                    </div>
+
+                    <div class="bg-purple-50 border-2 border-purple-300 rounded-lg p-4 text-center">
+                        <div class="text-3xl font-bold text-purple-600 mb-2">Θ</div>
+                        <p class="font-semibold text-purple-900 mb-1">Tight Bound</p>
+                        <p class="text-sm text-purple-700">= (Exactly)</p>
+                    </div>
+
+                    <div class="bg-green-50 border-2 border-green-200 rounded-lg p-4 text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">Ω</div>
+                        <p class="font-semibold text-green-900 mb-1">Lower Bound</p>
+                        <p class="text-sm text-green-700">≥ (At least)</p>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">When to Use Theta</h3>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-start gap-3 p-4 bg-purple-50 rounded-lg border border-purple-200">
+                        <i data-lucide="check" class="text-purple-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-purple-900">Loop Through Array</p>
+                            <p class="text-sm text-purple-700 mb-2">Always visits every element exactly once</p>
+                            <code class="text-xs bg-white px-2 py-1 rounded">Θ(n)</code>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-4 bg-purple-50 rounded-lg border border-purple-200">
+                        <i data-lucide="check" class="text-purple-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-purple-900">Nested Loop (NxN)</p>
+                            <p class="text-sm text-purple-700 mb-2">Always performs n² iterations</p>
+                            <code class="text-xs bg-white px-2 py-1 rounded">Θ(n²)</code>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-300">
+                        <i data-lucide="x" class="text-gray-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-gray-900">Binary Search</p>
+                            <p class="text-sm text-gray-700 mb-2">May find element early (not tight bound)</p>
+                            <code class="text-xs bg-white px-2 py-1 rounded">O(log n) not Θ(log n)</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="info" class="text-purple-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-purple-900 mb-1">Important Note</p>
+                            <p class="text-purple-800 text-sm">Theta is more precise than Big-O, but we can only use it when best and worst cases have the same complexity. Use Big-O when in doubt!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 6: Big-Omega Notation -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Big-Omega (Ω) Notation</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Big-Omega notation describes the <strong>lower bound</strong> of an algorithm's growth rate. It represents 
+                    the best-case scenario - the minimum time or space an algorithm will need. While less commonly used than 
+                    Big-O, it's important for understanding algorithm performance range.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Formal Definition</h3>
+                
+                <div class="bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-300 rounded-lg p-5 mb-6">
+                    <p class="text-gray-700 mb-3">A function f(n) is Ω(g(n)) if there exist positive constants c and n₀ such that:</p>
+                    <div class="bg-white rounded-lg p-4 border border-green-300 text-center">
+                        <code class="text-xl font-mono text-green-900">0 ≤ c · g(n) ≤ f(n) for all n ≥ n₀</code>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3 italic">Translation: f(n) grows at least as fast as g(n) times some constant</p>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Notation Relationships</h3>
+                
+                <div class="bg-gray-50 rounded-lg p-5 border-2 border-gray-200 mb-6">
+                    <div class="grid grid-cols-1 gap-3">
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <span class="font-mono text-lg font-bold text-gray-900 min-w-[100px]">O(g(n))</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-gray-400"></i>
+                            <span class="text-sm text-gray-700">f(n) grows <strong>no faster than</strong> g(n)</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <span class="font-mono text-lg font-bold text-gray-900 min-w-[100px]">Ω(g(n))</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-gray-400"></i>
+                            <span class="text-sm text-gray-700">f(n) grows <strong>no slower than</strong> g(n)</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <span class="font-mono text-lg font-bold text-gray-900 min-w-[100px]">Θ(g(n))</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-gray-400"></i>
+                            <span class="text-sm text-gray-700">f(n) grows <strong>at the same rate as</strong> g(n)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Practical Examples</h3>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="border-2 border-green-200 rounded-lg p-4 bg-green-50">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="font-bold text-green-900">Linear Search (Best Case)</h4>
+                            <span class="px-3 py-1 bg-green-600 text-white rounded-full text-sm font-mono">Ω(1)</span>
+                        </div>
+                        <p class="text-sm text-green-800 mb-2">Element found at first position</p>
+                        <div class="bg-white border border-green-300 rounded-lg p-2">
+                            <code class="text-xs text-green-700">Best: [<strong class="text-red-600">5</strong>, 3, 8, 1] searching for 5 → found immediately!</code>
+                        </div>
+                    </div>
+
+                    <div class="border-2 border-blue-200 rounded-lg p-4 bg-blue-50">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="font-bold text-blue-900">Merge Sort</h4>
+                            <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-mono">Ω(n log n)</span>
+                        </div>
+                        <p class="text-sm text-blue-800">Even in best case, must divide and merge all elements</p>
+                    </div>
+
+                    <div class="border-2 border-purple-200 rounded-lg p-4 bg-purple-50">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="font-bold text-purple-900">Bubble Sort (Best Case)</h4>
+                            <span class="px-3 py-1 bg-purple-600 text-white rounded-full text-sm font-mono">Ω(n)</span>
+                        </div>
+                        <p class="text-sm text-purple-800">Already sorted array - one pass to confirm</p>
+                    </div>
+                </div>
+
+                <!-- Asymptotic Notations Visualization -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200 bg-white p-4">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230316113755/notations-768.png" 
+                         alt="Asymptotic Notations Comparison" 
+                         class="w-full h-auto">
+                </div>
+
+                <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="lightbulb" class="text-green-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-green-900 mb-1">Remember</p>
+                            <p class="text-green-800 text-sm">If an algorithm is Θ(f(n)), then it is also O(f(n)) AND Ω(f(n)). Theta means both upper and lower bounds match!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 7: Best, Average, and Worst Cases -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic7">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Best, Average, and Worst Cases</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Algorithm performance varies based on input characteristics. Understanding best, average, and worst-case 
+                    scenarios helps you predict real-world performance and make informed decisions about which algorithm to use.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-300 rounded-lg p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i data-lucide="smile" class="text-green-600 w-6 h-6"></i>
+                            <h3 class="font-bold text-green-900 text-lg">Best Case</h3>
+                        </div>
+                        <p class="text-sm text-green-800 mb-3">Minimum time/space needed. Occurs with most favorable input.</p>
+                        <div class="bg-white rounded-lg p-3 border border-green-200">
+                            <p class="text-xs font-semibold text-green-900 mb-1">Notation:</p>
+                            <code class="text-sm font-mono text-green-700">Ω (Omega)</code>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-300 rounded-lg p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i data-lucide="meh" class="text-yellow-600 w-6 h-6"></i>
+                            <h3 class="font-bold text-yellow-900 text-lg">Average Case</h3>
+                        </div>
+                        <p class="text-sm text-yellow-800 mb-3">Expected time/space for typical inputs. Most realistic measure.</p>
+                        <div class="bg-white rounded-lg p-3 border border-yellow-200">
+                            <p class="text-xs font-semibold text-yellow-900 mb-1">Notation:</p>
+                            <code class="text-sm font-mono text-yellow-700">Θ (Theta)</code>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-300 rounded-lg p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i data-lucide="frown" class="text-red-600 w-6 h-6"></i>
+                            <h3 class="font-bold text-red-900 text-lg">Worst Case</h3>
+                        </div>
+                        <p class="text-sm text-red-800 mb-3">Maximum time/space needed. Occurs with least favorable input.</p>
+                        <div class="bg-white rounded-lg p-3 border border-red-200">
+                            <p class="text-xs font-semibold text-red-900 mb-1">Notation:</p>
+                            <code class="text-sm font-mono text-red-700">O (Big-O)</code>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Real Algorithm Examples</h3>
+
+                <!-- Linear Search Example -->
+                <div class="border-2 border-gray-200 rounded-lg p-5 mb-4">
+                    <h4 class="font-bold text-gray-900 text-lg mb-3 flex items-center gap-2">
+                        <i data-lucide="search" class="w-5 h-5 text-red-900"></i>
+                        Linear Search
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
+                        <div class="bg-green-50 rounded-lg p-3 border border-green-200">
+                            <p class="text-xs font-semibold text-green-900 mb-1">Best Case: Ω(1)</p>
+                            <p class="text-xs text-green-700">Element at first position</p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-3 border border-yellow-200">
+                            <p class="text-xs font-semibold text-yellow-900 mb-1">Average Case: Θ(n)</p>
+                            <p class="text-xs text-yellow-700">Element in middle on average</p>
+                        </div>
+                        <div class="bg-red-50 rounded-lg p-3 border border-red-200">
+                            <p class="text-xs font-semibold text-red-900 mb-1">Worst Case: O(n)</p>
+                            <p class="text-xs text-red-700">Element at last or not found</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-900 rounded-lg p-3">
+                        <code class="text-green-400 text-sm">
+                            for (int i = 0; i < n; i++) {<br>
+                            &nbsp;&nbsp;if (arr[i] == target) return i; // Found!<br>
+                            }<br>
+                            return -1; // Not found
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Binary Search Example -->
+                <div class="border-2 border-gray-200 rounded-lg p-5 mb-4">
+                    <h4 class="font-bold text-gray-900 text-lg mb-3 flex items-center gap-2">
+                        <i data-lucide="git-branch" class="w-5 h-5 text-red-900"></i>
+                        Binary Search
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
+                        <div class="bg-green-50 rounded-lg p-3 border border-green-200">
+                            <p class="text-xs font-semibold text-green-900 mb-1">Best Case: Ω(1)</p>
+                            <p class="text-xs text-green-700">Element at middle position</p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-3 border border-yellow-200">
+                            <p class="text-xs font-semibold text-yellow-900 mb-1">Average Case: Θ(log n)</p>
+                            <p class="text-xs text-yellow-700">Typical search depth</p>
+                        </div>
+                        <div class="bg-red-50 rounded-lg p-3 border border-red-200">
+                            <p class="text-xs font-semibold text-red-900 mb-1">Worst Case: O(log n)</p>
+                            <p class="text-xs text-red-700">Maximum tree depth</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-gray-600 italic">Note: Requires sorted array</p>
+                </div>
+
+                <!-- Quick Sort Example -->
+                <div class="border-2 border-gray-200 rounded-lg p-5 mb-6">
+                    <h4 class="font-bold text-gray-900 text-lg mb-3 flex items-center gap-2">
+                        <i data-lucide="shuffle" class="w-5 h-5 text-red-900"></i>
+                        Quick Sort
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
+                        <div class="bg-green-50 rounded-lg p-3 border border-green-200">
+                            <p class="text-xs font-semibold text-green-900 mb-1">Best Case: Ω(n log n)</p>
+                            <p class="text-xs text-green-700">Balanced partitions</p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-3 border border-yellow-200">
+                            <p class="text-xs font-semibold text-yellow-900 mb-1">Average Case: Θ(n log n)</p>
+                            <p class="text-xs text-yellow-700">Typical random pivot</p>
+                        </div>
+                        <div class="bg-red-50 rounded-lg p-3 border border-red-200">
+                            <p class="text-xs font-semibold text-red-900 mb-1">Worst Case: O(n²)</p>
+                            <p class="text-xs text-red-700">Already sorted, bad pivot</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-gray-600 italic">Note: Worst case rare with random pivot selection</p>
+                </div>
+
+                <!-- Comparison Table -->
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Common Algorithm Complexities</h3>
+                
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 px-3 py-2 text-left">Algorithm</th>
+                                <th class="border border-gray-300 px-3 py-2 text-center bg-green-50">Best</th>
+                                <th class="border border-gray-300 px-3 py-2 text-center bg-yellow-50">Average</th>
+                                <th class="border border-gray-300 px-3 py-2 text-center bg-red-50">Worst</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">Linear Search</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Ω(1)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Θ(n)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">O(n)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">Binary Search</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Ω(1)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Θ(log n)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">O(log n)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">Bubble Sort</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Ω(n)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Θ(n²)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">O(n²)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">Quick Sort</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Ω(n log n)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Θ(n log n)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">O(n²)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">Merge Sort</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Ω(n log n)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Θ(n log n)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">O(n log n)</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-3 py-2 font-medium">Heap Sort</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Ω(n log n)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">Θ(n log n)</td>
+                                <td class="border border-gray-300 px-3 py-2 text-center">O(n log n)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="alert-triangle" class="text-blue-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-blue-900 mb-1">Design Decision</p>
+                            <p class="text-blue-800 text-sm">In practice, we often focus on worst-case (Big-O) because it guarantees performance won't exceed that bound. Average case is valuable when typical inputs differ significantly from worst case.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Lecture Section -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="video" class="text-red-900 w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">Video Lectures</h2>
+                </div>
+                
+                <!-- Video 1 -->
+                <div class="mb-4">
+                    <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" 
+                                src="https://www.youtube.com/embed/__vX2sjlpXU" 
+                                title="Big O Notation" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-2">
+                        <p class="font-medium text-gray-900">Big O Notation - Full Course</p>
+                        <p class="text-sm text-gray-600">Duration: ~25 minutes | by freeCodeCamp.org</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div>
+                    <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" 
+                                src="https://www.youtube.com/embed/Mo4vesaut8g" 
+                                title="Asymptotic Notations" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-2">
+                        <p class="font-medium text-gray-900">Asymptotic Analysis Explained</p>
+                        <p class="text-sm text-gray-600">Duration: ~15 minutes | Big-O, Theta, Omega</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practice Quiz -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="clipboard-check" class="text-green-600 w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">Knowledge Check Quiz</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">1. What does O(n) mean in Big-O notation?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">The algorithm takes exactly n seconds</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Time grows linearly with input size</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">The algorithm uses n bytes of memory</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">The algorithm is the fastest possible</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">2. Which notation represents the tight bound (exact growth rate)?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Big-O (O)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Big-Theta (Θ)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Big-Omega (Ω)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">All of the above</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">3. What is the time complexity of accessing an element in an array by index?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">O(1)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">O(log n)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">O(n)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">O(n²)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">4. In worst-case analysis, linear search has complexity:</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">O(1)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">O(log n)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">O(n)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">O(n log n)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">5. Space complexity measures:</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">How fast an algorithm runs</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Memory required by an algorithm</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Number of lines of code</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Size of the input data</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-red-900 hover:bg-red-800 text-white py-3 rounded-lg font-medium transition">
+                        Submit Quiz
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex items-center justify-between pt-6">
+                <a href="module1.php" class="flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 font-medium text-gray-700 transition">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    Previous Module
+                </a>
+                <button class="flex items-center gap-2 px-6 py-3 bg-red-900 text-white rounded-lg hover:bg-red-800 font-medium transition">
+                    Next Module
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-6">
+            
+            <!-- Module Progress -->
+            <div class="bg-white rounded-xl shadow-sm p-6 sticky top-6">
+                <h3 class="font-bold text-lg mb-4">Module Progress</h3>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between text-sm mb-2">
+                        <span class="text-gray-600">Overall Completion</span>
+                        <span class="font-bold text-red-900">0%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-red-900 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="book-open" class="w-4 h-4 text-gray-400"></i>
+                            <span class="text-gray-700">Reading</span>
+                        </div>
+                        <span class="text-gray-400 font-medium">Not Started</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="video" class="w-4 h-4 text-gray-400"></i>
+                            <span class="text-gray-700">Videos</span>
+                        </div>
+                        <span class="text-gray-400 font-medium">Not Started</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="clipboard-check" class="w-4 h-4 text-gray-400"></i>
+                            <span class="text-gray-700">Quiz</span>
+                        </div>
+                        <span class="text-gray-400 font-medium">Not Started</span>
+                    </div>
+                </div>
+
+                <button class="w-full bg-red-900 hover:bg-red-800 text-white py-3 rounded-lg font-medium transition">
+                    Mark as Complete
+                </button>
+            </div>
+
+            <!-- Module Outline -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h3 class="font-bold text-lg mb-4">Module Outline</h3>
+                <div class="space-y-2">
+                    <a href="#topic1" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Time Complexity</span>
+                    </a>
+                    <a href="#topic2" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Space Complexity</span>
+                    </a>
+                    <a href="#topic3" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Growth of Functions</span>
+                    </a>
+                    <a href="#topic4" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Big-O Notation</span>
+                    </a>
+                    <a href="#topic5" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Big-Theta Notation</span>
+                    </a>
+                    <a href="#topic6" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Big-Omega Notation</span>
+                    </a>
+                    <a href="#topic7" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Best, Average, Worst Cases</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Complexity Cheat Sheet -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h3 class="font-bold text-lg mb-4">Quick Reference</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="flex items-center justify-between p-2 bg-green-50 rounded">
+                        <span class="font-mono text-green-700">O(1)</span>
+                        <span class="text-green-700">Excellent</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2 bg-lime-50 rounded">
+                        <span class="font-mono text-lime-700">O(log n)</span>
+                        <span class="text-lime-700">Good</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2 bg-yellow-50 rounded">
+                        <span class="font-mono text-yellow-700">O(n)</span>
+                        <span class="text-yellow-700">Fair</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2 bg-orange-50 rounded">
+                        <span class="font-mono text-orange-700">O(n log n)</span>
+                        <span class="text-orange-700">Acceptable</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2 bg-red-50 rounded">
+                        <span class="font-mono text-red-700">O(n²)</span>
+                        <span class="text-red-700">Bad</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2 bg-purple-50 rounded">
+                        <span class="font-mono text-purple-700">O(2ⁿ)</span>
+                        <span class="text-purple-700">Terrible</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h3 class="font-bold text-lg mb-4">Resources</h3>
+                <div class="space-y-3">
+                    <a href="https://www.bigocheatsheet.com/" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="file-text" class="w-5 h-5 text-red-900"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">Big-O Cheat Sheet</p>
+                            <p class="text-xs text-gray-500">Interactive Reference</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="book" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">Big-O Analysis</p>
+                            <p class="text-xs text-gray-500">GeeksforGeeks</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-green-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">Khan Academy</p>
+                            <p class="text-xs text-gray-500">Asymptotic Notation</p>
+                        </div>
+                    </a>
+
+                    <a href="https://livephysics.com/tools/big-o-visualizer/" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="activity" class="w-5 h-5 text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">Complexity Visualizer</p>
+                            <p class="text-xs text-gray-500">Interactive Tool</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Key Takeaways -->
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+                <div class="flex items-center gap-3 mb-3">
+                    <i data-lucide="star" class="w-6 h-6 text-blue-600"></i>
+                    <h3 class="font-bold text-blue-900">Key Takeaways</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-blue-800">
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Big-O describes upper bound (worst case)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Theta gives tight bound (exact growth)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Omega describes lower bound (best case)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Focus on dominant terms, drop constants</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Space-time tradeoffs are common</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Help Section -->
+            <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-6 border border-red-200">
+                <div class="flex items-center gap-3 mb-3">
+                    <i data-lucide="help-circle" class="w-6 h-6 text-red-600"></i>
+                    <h3 class="font-bold text-red-900">Need Help?</h3>
+                </div>
+                <p class="text-sm text-red-800 mb-4">Struggling with complexity analysis? Our instructors can help clarify concepts!</p>
+                <button class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg text-sm font-medium transition">
+                    Ask a Question
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    lucide.createIcons();
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

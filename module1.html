@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Structure and Algorithm</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'DM Sans',sans-serif;background:#f8fafc}
+.card{transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.1)}
+.hero{background:linear-gradient(135deg,#800000,#a00000)}
+</style>
+</head>
+<body>
+<header class="bg-white shadow-sm">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-red-900 rounded-lg flex items-center justify-center">
+<i data-lucide="git-branch" class="text-white"></i>
+</div>
+<h1 class="font-bold text-2xl">Data Structure and Algorithm Module</h1>
+</div>
+<nav class="flex gap-6 text-sm">
+<a href="index.html">Dashboard</a>
+<a href="#">Resources</a>
+</nav>
+</div>
+</header>
+
+<!-- Module 1: Introduction to DSA -->
+<div class="max-w-7xl mx-auto px-6 py-8">
+    
+    <!-- Breadcrumb Navigation -->
+    <div class="flex items-center gap-2 text-sm text-gray-600 mb-6">
+        <a href="index.php" class="hover:text-red-900">Home</a>
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <a href="#" class="hover:text-red-900">Module 1</a>
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <span class="text-red-900 font-medium">Introduction to DSA</span>
+    </div>
+
+    <!-- Lesson Header -->
+    <div class="bg-gradient-to-r from-red-900 to-red-800 rounded-2xl p-8 mb-8 text-white">
+        <div class="flex items-start justify-between">
+            <div class="flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">Module 1</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">Foundation</span>
+                </div>
+                <h1 class="text-4xl font-bold mb-4">Introduction to Data Structures & Algorithms</h1>
+                <p class="text-red-100 text-lg mb-4">Master the fundamental concepts that form the backbone of computer science and software development</p>
+                <div class="flex items-center gap-6 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="clock" class="w-4 h-4"></i>
+                        <span>60 minutes</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="bar-chart" class="w-4 h-4"></i>
+                        <span>Beginner</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="book-open" class="w-4 h-4"></i>
+                        <span>6 Topics</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold">0%</div>
+                <div class="text-sm text-red-100">Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Main Content Area -->
+        <div class="lg:col-span-2 space-y-6">
+            
+            <!-- Learning Objectives -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="target" class="text-red-900 w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">Learning Objectives</h2>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Understand the overview and importance of DSA in computing</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Develop computational thinking skills for problem-solving</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Master essential problem-solving techniques</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Learn the algorithm design process from concept to implementation</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Explore real-world applications of DSA in modern technology</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Topic 1: Overview of DSA -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic1">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Overview of Data Structures and Algorithms</h2>
+                
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">What is Data Structures & Algorithms?</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Data Structures and Algorithms (DSA) represent the fundamental building blocks of computer science. 
+                    A <strong>data structure</strong> organizes and stores data efficiently, while an <strong>algorithm</strong> 
+                    provides step-by-step procedures to solve computational problems. Together, they form a critical toolkit 
+                    for building optimized, reliable software.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-5 border border-blue-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="database" class="text-blue-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-blue-900">Data Structures</h4>
+                        </div>
+                        <p class="text-sm text-blue-800">Ways to organize and store data for efficient access and modification</p>
+                        <ul class="mt-3 space-y-1 text-sm text-blue-800">
+                            <li>• Arrays & Lists</li>
+                            <li>• Stacks & Queues</li>
+                            <li>• Trees & Graphs</li>
+                            <li>• Hash Tables</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-5 border border-purple-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="cpu" class="text-purple-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-purple-900">Algorithms</h4>
+                        </div>
+                        <p class="text-sm text-purple-800">Step-by-step procedures to solve problems and perform computations</p>
+                        <ul class="mt-3 space-y-1 text-sm text-purple-800">
+                            <li>• Searching & Sorting</li>
+                            <li>• Recursion & Dynamic Programming</li>
+                            <li>• Graph Algorithms</li>
+                            <li>• Greedy & Divide-Conquer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DSA Overview Image -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200">
+                    <img src="https://cdn.programiz.com/sites/tutorial2program/files/why-learn-dsa.png" 
+                         alt="Data Structures and Algorithms Overview" 
+                         class="w-full h-auto">
+                </div>
+                
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="lightbulb" class="text-amber-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-amber-900 mb-1">Key Insight</p>
+                            <p class="text-amber-800 text-sm">Think of DSA as the grammar and vocabulary of programming - just as good language skills help you communicate effectively, strong DSA knowledge helps you write efficient, elegant code!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 2: Importance of DSA -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic2">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Importance of DSA in Computing</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Understanding DSA is crucial for every software developer. It supports everything from application 
+                    development and database management to artificial intelligence, network routing, and countless other 
+                    computing domains. Strong DSA skills are often considered a hallmark of excellent software developers.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-white border-2 border-green-200 rounded-lg p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="zap" class="text-green-600 w-4 h-4"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900">Performance Optimization</h4>
+                        </div>
+                        <p class="text-sm text-gray-700">Efficient algorithms can reduce execution time from hours to seconds, making applications faster and more responsive</p>
+                    </div>
+
+                    <div class="bg-white border-2 border-blue-200 rounded-lg p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="trending-up" class="text-blue-600 w-4 h-4"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900">Scalability</h4>
+                        </div>
+                        <p class="text-sm text-gray-700">Proper data structures ensure your application can handle growing amounts of data efficiently</p>
+                    </div>
+
+                    <div class="bg-white border-2 border-purple-200 rounded-lg p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="briefcase" class="text-purple-600 w-4 h-4"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900">Career Advancement</h4>
+                        </div>
+                        <p class="text-sm text-gray-700">DSA proficiency is essential for technical interviews at top tech companies and career growth</p>
+                    </div>
+
+                    <div class="bg-white border-2 border-red-200 rounded-lg p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="brain" class="text-red-600 w-4 h-4"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900">Problem-Solving Skills</h4>
+                        </div>
+                        <p class="text-sm text-gray-700">Learning DSA sharpens your analytical thinking and systematic approach to solving complex problems</p>
+                    </div>
+                </div>
+
+                <!-- Why DSA Image -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230807133054/Why-should-you-learn-Data-Structures-and-Algorithms.png" 
+                         alt="Why Learn DSA" 
+                         class="w-full h-auto">
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="info" class="text-blue-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-blue-900 mb-1">Industry Fact</p>
+                            <p class="text-blue-800 text-sm">According to Glassdoor, demand for DSA skills in tech jobs is significantly high, especially at product-based companies where proficiency is considered essential for software developers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 3: Computational Thinking -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Computational Thinking</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Computational thinking is a problem-solving process rooted in computer science principles. It involves 
+                    breaking down complex problems into manageable parts and devising systematic approaches to solve them. 
+                    This cognitive framework combines human creativity with computer capabilities.
+                </p>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Four Pillars of Computational Thinking</h3>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-lg">1</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-900 mb-1">Decomposition</h4>
+                            <p class="text-sm text-gray-700">Breaking complex problems into smaller, more manageable sub-problems that are easier to understand and solve</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-lg">2</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-900 mb-1">Pattern Recognition</h4>
+                            <p class="text-sm text-gray-700">Identifying similarities, patterns, and trends within problems to apply known solutions to new scenarios</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-lg">3</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-900 mb-1">Abstraction</h4>
+                            <p class="text-sm text-gray-700">Filtering out unnecessary details and focusing on the essential information relevant to solving the problem</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-lg">4</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-900 mb-1">Algorithm Design</h4>
+                            <p class="text-sm text-gray-700">Creating step-by-step instructions or rules that, when followed, will solve the problem efficiently</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computational Thinking Diagram -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200 bg-white p-4">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240103121837/What-is-Computational-Thinking.jpg" 
+                         alt="Computational Thinking Process" 
+                         class="w-full h-auto">
+                </div>
+
+                <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="code" class="text-green-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-green-900 mb-1">Practical Example</p>
+                            <p class="text-green-800 text-sm">Think about planning a road trip: You decompose the journey into segments, recognize patterns in route options, abstract the key factors (time, cost, distance), and design an algorithm (step-by-step plan) for the optimal route.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 4: Problem-Solving Techniques -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic4">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Problem-Solving Techniques</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Mastering various problem-solving techniques is essential for effective algorithm design. Different 
+                    problems require different approaches, and knowing when to apply each technique is key to becoming 
+                    a proficient programmer.
+                </p>
+
+                <!-- Techniques Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-5 border border-red-200">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i data-lucide="split" class="text-red-600 w-5 h-5"></i>
+                            <h3 class="font-bold text-red-900">Divide and Conquer</h3>
+                        </div>
+                        <p class="text-sm text-red-800 mb-2">Break the problem into smaller sub-problems, solve each independently, then combine solutions</p>
+                        <p class="text-xs text-red-700 font-medium">Examples: Merge Sort, Quick Sort, Binary Search</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-5 border border-blue-200">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i data-lucide="coins" class="text-blue-600 w-5 h-5"></i>
+                            <h3 class="font-bold text-blue-900">Greedy Algorithm</h3>
+                        </div>
+                        <p class="text-sm text-blue-800 mb-2">Make locally optimal choices at each step, hoping to find a global optimum</p>
+                        <p class="text-xs text-blue-700 font-medium">Examples: Dijkstra's Algorithm, Huffman Coding</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-5 border border-green-200">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i data-lucide="layers" class="text-green-600 w-5 h-5"></i>
+                            <h3 class="font-bold text-green-900">Dynamic Programming</h3>
+                        </div>
+                        <p class="text-sm text-green-800 mb-2">Solve complex problems by breaking them down and storing solutions to avoid redundant calculations</p>
+                        <p class="text-xs text-green-700 font-medium">Examples: Fibonacci, Knapsack Problem</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-5 border border-purple-200">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i data-lucide="git-branch" class="text-purple-600 w-5 h-5"></i>
+                            <h3 class="font-bold text-purple-900">Backtracking</h3>
+                        </div>
+                        <p class="text-sm text-purple-800 mb-2">Try different solutions and backtrack when a solution path fails to meet constraints</p>
+                        <p class="text-xs text-purple-700 font-medium">Examples: N-Queens, Sudoku Solver</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-5 border border-orange-200">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i data-lucide="repeat" class="text-orange-600 w-5 h-5"></i>
+                            <h3 class="font-bold text-orange-900">Recursion</h3>
+                        </div>
+                        <p class="text-sm text-orange-800 mb-2">A function calls itself with smaller inputs until reaching a base case</p>
+                        <p class="text-xs text-orange-700 font-medium">Examples: Tree Traversal, Tower of Hanoi</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-5 border border-teal-200">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i data-lucide="search" class="text-teal-600 w-5 h-5"></i>
+                            <h3 class="font-bold text-teal-900">Brute Force</h3>
+                        </div>
+                        <p class="text-sm text-teal-800 mb-2">Try all possible solutions systematically to find the correct answer</p>
+                        <p class="text-xs text-teal-700 font-medium">Examples: Linear Search, Password Cracking</p>
+                    </div>
+                </div>
+
+                <!-- Problem Solving Steps -->
+                <div class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+                    <h3 class="font-bold text-gray-900 mb-3">General Problem-Solving Framework</h3>
+                    <ol class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-red-900 min-w-[24px]">1.</span>
+                            <span><strong>Understand the Problem:</strong> Read carefully, identify inputs/outputs, and clarify constraints</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-red-900 min-w-[24px]">2.</span>
+                            <span><strong>Plan the Solution:</strong> Choose appropriate data structures and algorithms</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-red-900 min-w-[24px]">3.</span>
+                            <span><strong>Implement:</strong> Write clean, readable code following your plan</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-red-900 min-w-[24px]">4.</span>
+                            <span><strong>Test & Debug:</strong> Verify with test cases and fix any issues</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-red-900 min-w-[24px]">5.</span>
+                            <span><strong>Optimize:</strong> Analyze complexity and improve if needed</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Topic 5: Algorithm Design Process -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic5">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Algorithm Design Process</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Designing an algorithm is a systematic process that transforms a problem statement into an efficient, 
+                    working solution. Following a structured approach ensures that algorithms are correct, efficient, and maintainable.
+                </p>
+
+                <!-- Algorithm Design Steps -->
+                <div class="space-y-4 mb-6">
+                    <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-lg">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-red-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-red-900 mb-1">Problem Definition</h4>
+                                <p class="text-sm text-red-800">Clearly define the problem, including inputs, outputs, constraints, and edge cases. Write it in your own words until it makes complete sense.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-orange-500 bg-orange-50 p-4 rounded-r-lg">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-orange-900 mb-1">Analysis & Planning</h4>
+                                <p class="text-sm text-orange-800">Analyze the problem requirements, identify patterns, and determine which algorithm design technique (divide-and-conquer, greedy, dynamic programming) is most appropriate.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-yellow-900 mb-1">Algorithm Development</h4>
+                                <p class="text-sm text-yellow-800">Create a step-by-step solution using pseudocode or flowcharts. Focus on logic first, not syntax.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-green-500 bg-green-50 p-4 rounded-r-lg">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
+                            <div>
+                                <h4 class="font-bold text-green-900 mb-1">Implementation</h4>
+                                <p class="text-sm text-green-800">Translate your algorithm into actual code using a programming language. Write clean, readable code with meaningful variable names.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded-r-lg">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">5</div>
+                            <div>
+                                <h4 class="font-bold text-blue-900 mb-1">Testing & Validation</h4>
+                                <p class="text-sm text-blue-800">Test with various inputs including normal cases, edge cases, and boundary conditions. Debug and fix any errors discovered.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-purple-500 bg-purple-50 p-4 rounded-r-lg">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">6</div>
+                            <div>
+                                <h4 class="font-bold text-purple-900 mb-1">Analysis & Optimization</h4>
+                                <p class="text-sm text-purple-800">Analyze time and space complexity using Big O notation. Optimize if necessary to improve performance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-pink-500 bg-pink-50 p-4 rounded-r-lg">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-pink-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">7</div>
+                            <div>
+                                <h4 class="font-bold text-pink-900 mb-1">Documentation</h4>
+                                <p class="text-sm text-pink-800">Document the algorithm with clear comments, explaining the logic, complexity, and any important decisions made.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flowchart Image -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200 bg-gray-50 p-4">
+                    <img src="https://static.javatpoint.com/tutorial/daa/images/daa-algorithm-design-and-analysis.png" 
+                         alt="Algorithm Design Process" 
+                         class="w-full h-auto">
+                </div>
+
+                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="workflow" class="text-indigo-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-indigo-900 mb-1">Remember</p>
+                            <p class="text-indigo-800 text-sm">Algorithm design is iterative - you may need to revisit earlier steps as you learn more about the problem during implementation and testing!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 6: Real-World Applications -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Real-World Applications of DSA</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Data Structures and Algorithms aren't just theoretical concepts - they power the technology we use every day. 
+                    Understanding these applications helps you appreciate why DSA is so important in modern computing.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-5 border-2 border-blue-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="share-2" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-blue-900">Social Media</h3>
+                        </div>
+                        <p class="text-sm text-blue-800 mb-2">Graph algorithms power friend suggestions, news feed ranking, and content recommendations</p>
+                        <div class="text-xs text-blue-700 font-medium">Used by: Facebook, Instagram, LinkedIn</div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-5 border-2 border-green-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="navigation" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-green-900">GPS & Navigation</h3>
+                        </div>
+                        <p class="text-sm text-green-800 mb-2">Shortest path algorithms (Dijkstra, A*) calculate optimal routes considering traffic and distance</p>
+                        <div class="text-xs text-green-700 font-medium">Used by: Google Maps, Waze, Uber</div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-5 border-2 border-purple-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="search" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-purple-900">Search Engines</h3>
+                        </div>
+                        <p class="text-sm text-purple-800 mb-2">Hash tables, tries, and ranking algorithms enable fast searching of billions of web pages</p>
+                        <div class="text-xs text-purple-700 font-medium">Used by: Google, Bing, DuckDuckGo</div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-5 border-2 border-red-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="shopping-cart" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-red-900">E-Commerce</h3>
+                        </div>
+                        <p class="text-sm text-red-800 mb-2">Recommendation systems use collaborative filtering and decision trees for product suggestions</p>
+                        <div class="text-xs text-red-700 font-medium">Used by: Amazon, eBay, Shopify</div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-5 border-2 border-yellow-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-yellow-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="database" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-yellow-900">Database Systems</h3>
+                        </div>
+                        <p class="text-sm text-yellow-800 mb-2">B-trees and hash indexing enable efficient data retrieval and query optimization</p>
+                        <div class="text-xs text-yellow-700 font-medium">Used by: MySQL, PostgreSQL, MongoDB</div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-5 border-2 border-indigo-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="play" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-indigo-900">Streaming Services</h3>
+                        </div>
+                        <p class="text-sm text-indigo-800 mb-2">Queues manage buffering, recommendation algorithms suggest content based on viewing history</p>
+                        <div class="text-xs text-indigo-700 font-medium">Used by: Netflix, YouTube, Spotify</div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg p-5 border-2 border-pink-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-pink-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="cpu" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-pink-900">Operating Systems</h3>
+                        </div>
+                        <p class="text-sm text-pink-800 mb-2">Scheduling algorithms, memory management using heaps and trees for resource allocation</p>
+                        <div class="text-xs text-pink-700 font-medium">Used by: Windows, macOS, Linux</div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-5 border-2 border-teal-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-teal-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="brain" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-teal-900">Artificial Intelligence</h3>
+                        </div>
+                        <p class="text-sm text-teal-800 mb-2">Search algorithms (A*, minimax) power game AI, chatbots, and decision-making systems</p>
+                        <div class="text-xs text-teal-700 font-medium">Used by: ChatGPT, Game AI, Robotics</div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-5 border-2 border-orange-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center">
+                                <i data-lucide="shield" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-orange-900">Cybersecurity</h3>
+                        </div>
+                        <p class="text-sm text-orange-800 mb-2">Cryptographic algorithms, hash functions for password storage, and intrusion detection systems</p>
+                        <div class="text-xs text-orange-700 font-medium">Used by: Security Software, Blockchain</div>
+                    </div>
+                </div>
+
+                <!-- Applications Image -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200">
+                    <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230807133526/Applications-of-Data-Structure.png" 
+                         alt="Real World Applications of DSA" 
+                         class="w-full h-auto">
+                </div>
+
+                <div class="bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="rocket" class="text-red-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-red-900 mb-1">Career Impact</p>
+                            <p class="text-red-800 text-sm">Companies like Google, Microsoft, Amazon, and Meta extensively test DSA knowledge during interviews because these skills directly translate to building scalable, efficient systems that serve billions of users!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Lecture Section -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="video" class="text-red-900 w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">Video Lectures</h2>
+                </div>
+                
+                <!-- Video 1 -->
+                <div class="mb-4">
+                    <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" 
+                                src="https://www.youtube.com/embed/8hly31xKli0" 
+                                title="Introduction to Algorithms" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-2">
+                        <p class="font-medium text-gray-900">Introduction to Data Structures & Algorithms</p>
+                        <p class="text-sm text-gray-600">Duration: ~30 minutes | by freeCodeCamp.org</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div>
+                    <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" 
+                                src="https://www.youtube.com/embed/CBYHwZcbD-s" 
+                                title="Computational Thinking" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-2">
+                        <p class="font-medium text-gray-900">Computational Thinking Explained</p>
+                        <p class="text-sm text-gray-600">Duration: ~10 minutes | Problem-solving fundamentals</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Knowledge Check Quiz -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="clipboard-check" class="text-green-600 w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">Knowledge Check Quiz</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">1. Which of the following is NOT a pillar of computational thinking?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Decomposition</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Pattern Recognition</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Compilation</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Abstraction</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">2. Which problem-solving technique involves making locally optimal choices?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Dynamic Programming</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Greedy Algorithm</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Divide and Conquer</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Backtracking</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">3. What is the primary benefit of using appropriate data structures?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Makes code look professional</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Efficient data access and modification</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Reduces lines of code</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Eliminates all bugs</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">4. Which real-world application uses graph algorithms?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Social media friend suggestions</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Simple calculator</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Text editor</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Clock application</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">5. What is the first step in the algorithm design process?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Writing code</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Problem definition</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Testing</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Optimization</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-red-900 hover:bg-red-800 text-white py-3 rounded-lg font-medium transition">
+                        Submit Quiz
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex items-center justify-between pt-6">
+                <button class="flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 font-medium text-gray-700 transition">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    Back to Dashboard
+                </button>
+                <button class="flex items-center gap-2 px-6 py-3 bg-red-900 text-white rounded-lg hover:bg-red-800 font-medium transition">
+                    Next Module
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-6">
+            
+          
+
+              
+
+            <!-- Module Outline -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h3 class="font-bold text-lg mb-4">Module Outline</h3>
+                <div class="space-y-2">
+                    <a href="#topic1" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Overview of DSA</span>
+                    </a>
+                    <a href="#topic2" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Importance in Computing</span>
+                    </a>
+                    <a href="#topic3" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Computational Thinking</span>
+                    </a>
+                    <a href="#topic4" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Problem-Solving Techniques</span>
+                    </a>
+                    <a href="#topic5" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Algorithm Design Process</span>
+                    </a>
+                    <a href="#topic6" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Real-World Applications</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Resources -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h3 class="font-bold text-lg mb-4">Resources</h3>
+                <div class="space-y-3">
+                    <a href="https://www.geeksforgeeks.org/data-structures/" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="book" class="w-5 h-5 text-red-900"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">GeeksforGeeks DSA</p>
+                            <p class="text-xs text-gray-500">External Resource</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.programiz.com/dsa" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="code" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">Programiz Tutorials</p>
+                            <p class="text-xs text-gray-500">External Resource</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://visualgo.net/en" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="eye" class="w-5 h-5 text-green-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">Algorithm Visualizations</p>
+                            <p class="text-xs text-gray-500">Interactive Tool</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/playlist?list=PLWKjhJtqVAbkso-IbgiiP48n-O-JQA9PJ" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="youtube" class="w-5 h-5 text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">Video Playlist</p>
+                            <p class="text-xs text-gray-500">freeCodeCamp</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Key Takeaways -->
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+                <div class="flex items-center gap-3 mb-3">
+                    <i data-lucide="star" class="w-6 h-6 text-blue-600"></i>
+                    <h3 class="font-bold text-blue-900">Key Takeaways</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-blue-800">
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>DSA is essential for efficient programming</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Computational thinking involves 4 key pillars</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Different problems require different techniques</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Algorithm design is a systematic process</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>DSA powers modern technology</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Help Section -->
+            <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-6 border border-red-200">
+                <div class="flex items-center gap-3 mb-3">
+                    <i data-lucide="help-circle" class="w-6 h-6 text-red-600"></i>
+                    <h3 class="font-bold text-red-900">Need Help?</h3>
+                </div>
+                <p class="text-sm text-red-800 mb-4">Have questions about this module? Our instructors are here to support your learning journey!</p>
+                <button class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg text-sm font-medium transition">
+                    Ask a Question
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    lucide.createIcons();
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

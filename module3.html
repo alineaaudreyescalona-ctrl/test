@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Structure and Algorithm</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'DM Sans',sans-serif;background:#f8fafc}
+.card{transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.1)}
+.hero{background:linear-gradient(135deg,#800000,#a00000)}
+</style>
+</head>
+<body>
+<header class="bg-white shadow-sm">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-red-900 rounded-lg flex items-center justify-center">
+<i data-lucide="git-branch" class="text-white"></i>
+</div>
+<h1 class="font-bold text-2xl">Data Structure and Algorithm Module</h1>
+</div>
+<nav class="flex gap-6 text-sm">
+<a href="index.html">Dashboard</a>
+<a href="#">Resources</a>
+</nav>
+</div>
+</header>
+
+<!-- Module 3: Abstract Data Types -->
+<div class="max-w-7xl mx-auto px-6 py-8">
+    
+    <!-- Breadcrumb Navigation -->
+    <div class="flex items-center gap-2 text-sm text-gray-600 mb-6">
+        <a href="index.php" class="hover:text-red-900">Home</a>
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <a href="#" class="hover:text-red-900">Module 3</a>
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <span class="text-red-900 font-medium">Abstract Data Types</span>
+    </div>
+
+    <!-- Lesson Header -->
+    <div class="bg-gradient-to-r from-red-900 to-red-800 rounded-2xl p-8 mb-8 text-white">
+        <div class="flex items-start justify-between">
+            <div class="flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">Module 3</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">Fundamentals</span>
+                </div>
+                <h1 class="text-4xl font-bold mb-4">Abstract Data Types (ADT)</h1>
+                <p class="text-red-100 text-lg mb-4">Master the concepts of abstraction, encapsulation, and the separation between interface and implementation</p>
+                <div class="flex items-center gap-6 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="clock" class="w-4 h-4"></i>
+                        <span>55 minutes</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="bar-chart" class="w-4 h-4"></i>
+                        <span>Intermediate</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="book-open" class="w-4 h-4"></i>
+                        <span>4 Topics</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold">0%</div>
+                <div class="text-sm text-red-100">Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Main Content Area -->
+        <div class="lg:col-span-2 space-y-6">
+            
+            <!-- Learning Objectives -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="target" class="text-red-900 w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">Learning Objectives</h2>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Understand what Abstract Data Types (ADT) are and why they matter</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Master the concept of data abstraction in software design</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Learn encapsulation principles and information hiding</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Distinguish between interfaces and implementations effectively</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="text-green-500 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <span class="text-gray-700">Apply ADT principles to real-world programming scenarios</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Topic 1: Abstract Data Types (ADT) -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic1">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Abstract Data Types (ADT)</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    An <strong>Abstract Data Type (ADT)</strong> is a mathematical model that defines a data type by its behavior 
+                    from the user's perspective - specifically what operations can be performed and what those operations do. 
+                    It focuses on <em>what</em> rather than <em>how</em>, hiding implementation details from users.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">What Makes an ADT?</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-5 border-2 border-blue-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="list" class="text-white w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-blue-900">Data</h4>
+                        </div>
+                        <p class="text-sm text-blue-800">The values the type can hold</p>
+                        <p class="text-xs text-blue-700 mt-2 italic">Example: Stack stores elements</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-5 border-2 border-purple-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="settings" class="text-white w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-purple-900">Operations</h4>
+                        </div>
+                        <p class="text-sm text-purple-800">Actions that can be performed</p>
+                        <p class="text-xs text-purple-700 mt-2 italic">Example: push(), pop(), peek()</p>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Common ADT Examples</h3>
+                
+                <div class="space-y-4 mb-6">
+                    <!-- Stack ADT -->
+                    <div class="border-2 border-gray-200 rounded-lg p-5 bg-gradient-to-r from-gray-50 to-white">
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="layers" class="text-red-600 w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900 text-lg">Stack ADT</h4>
+                            </div>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">LIFO</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-3">Last In, First Out (LIFO) collection</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-red-700">push(item)</code>
+                            </div>
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-red-700">pop()</code>
+                            </div>
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-red-700">peek()</code>
+                            </div>
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-red-700">isEmpty()</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Queue ADT -->
+                    <div class="border-2 border-gray-200 rounded-lg p-5 bg-gradient-to-r from-gray-50 to-white">
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="arrow-right-left" class="text-blue-600 w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900 text-lg">Queue ADT</h4>
+                            </div>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">FIFO</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-3">First In, First Out (FIFO) collection</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-blue-700">enqueue(item)</code>
+                            </div>
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-blue-700">dequeue()</code>
+                            </div>
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-blue-700">front()</code>
+                            </div>
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-blue-700">isEmpty()</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- List ADT -->
+                    <div class="border-2 border-gray-200 rounded-lg p-5 bg-gradient-to-r from-gray-50 to-white">
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="list-ordered" class="text-green-600 w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-900 text-lg">List ADT</h4>
+                            </div>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">Ordered</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-3">Ordered collection with indexed access</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-green-700">add(item)</code>
+                            </div>
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-green-700">remove(index)</code>
+                            </div>
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-green-700">get(index)</code>
+                            </div>
+                            <div class="bg-white p-2 rounded border border-gray-200 text-center">
+                                <code class="text-xs font-mono text-green-700">size()</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADT Diagram -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200 bg-white p-4">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230706101923/Abstract-Data-Types.png" 
+                         alt="Abstract Data Types Diagram" 
+                         class="w-full h-auto">
+                </div>
+
+                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="lightbulb" class="text-indigo-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-indigo-900 mb-1">Key Insight</p>
+                            <p class="text-indigo-800 text-sm">ADTs separate "what" from "how". Users know what operations are available but don't need to know how they're implemented. This is like using a TV remote - you know what the buttons do, but not the internal electronics!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 2: Concept of ADTs & Data Abstraction -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic2">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Concept of ADTs & Data Abstraction</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <strong>Data Abstraction</strong> is the process of hiding implementation details while exposing only 
+                    essential features to users. It reduces complexity by focusing on <em>what</em> an object does rather 
+                    than <em>how</em> it achieves it. This is a fundamental principle in software engineering.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Levels of Abstraction</h3>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-lg">1</span>
+                        </div>
+                        <div class="flex-1 pt-2">
+                            <h4 class="font-bold text-gray-900 mb-1">Physical Level (Lowest)</h4>
+                            <p class="text-sm text-gray-700">How data is actually stored in memory (bits, bytes, pointers)</p>
+                            <div class="bg-gray-100 rounded p-2 mt-2 text-xs font-mono text-gray-600">
+                                Memory addresses: 0x7fff5fbff8a0
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 items-start">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-lg">2</span>
+                        </div>
+                        <div class="flex-1 pt-2">
+                            <h4 class="font-bold text-gray-900 mb-1">Logical Level (Middle)</h4>
+                            <p class="text-sm text-gray-700">Data structures and how they organize data (arrays, linked lists)</p>
+                            <div class="bg-gray-100 rounded p-2 mt-2 text-xs font-mono text-gray-600">
+                                Node → Node → Node → null
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 items-start">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-lg">3</span>
+                        </div>
+                        <div class="flex-1 pt-2">
+                            <h4 class="font-bold text-gray-900 mb-1">Abstract Level (Highest)</h4>
+                            <p class="text-sm text-gray-700">User interface - operations available to users (push, pop, enqueue)</p>
+                            <div class="bg-gray-100 rounded p-2 mt-2 text-xs font-mono text-gray-600">
+                                stack.push(5), stack.pop()
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Benefits of Data Abstraction</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 border border-green-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="shield-check" class="text-green-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-green-900">Security & Integrity</h4>
+                        </div>
+                        <p class="text-sm text-green-800">Prevents unauthorized access and manipulation of internal data</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4 border border-blue-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="minimize-2" class="text-blue-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-blue-900">Reduced Complexity</h4>
+                        </div>
+                        <p class="text-sm text-blue-800">Users don't need to understand implementation details</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-4 border border-purple-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="recycle" class="text-purple-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-purple-900">Reusability</h4>
+                        </div>
+                        <p class="text-sm text-purple-800">Same ADT can be reused across different projects</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-4 border border-orange-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="wrench" class="text-orange-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-orange-900">Maintainability</h4>
+                        </div>
+                        <p class="text-sm text-orange-800">Implementation can change without affecting users</p>
+                    </div>
+                </div>
+
+                <!-- Real-World Example -->
+                <div class="bg-gray-50 rounded-lg p-5 border-2 border-gray-200 mb-6">
+                    <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <i data-lucide="car" class="w-5 h-5 text-red-900"></i>
+                        Real-World Analogy: Driving a Car
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg p-4 border border-green-200">
+                            <p class="text-sm font-semibold text-green-900 mb-2">✓ What You See (Abstract)</p>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Steering wheel</li>
+                                <li>• Brake and gas pedals</li>
+                                <li>• Gear shift</li>
+                                <li>• Dashboard controls</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 border border-red-200">
+                            <p class="text-sm font-semibold text-red-900 mb-2">✗ What's Hidden (Implementation)</p>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Engine mechanics</li>
+                                <li>• Fuel injection system</li>
+                                <li>• Transmission gears</li>
+                                <li>• Electronic circuits</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3 italic">You can drive any car without knowing how the engine works - that's abstraction!</p>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="info" class="text-blue-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-blue-900 mb-1">Remember</p>
+                            <p class="text-blue-800 text-sm">Good abstraction shows the minimum necessary information while hiding maximum complexity. It's about creating the right interface for users!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 3: Encapsulation -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Encapsulation</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <strong>Encapsulation</strong> is the bundling of data and methods that operate on that data within a 
+                    single unit (class or object), while restricting direct access to some components. It's like putting 
+                    valuable items in a safe - you control access through specific methods.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Core Principles</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-5 border-2 border-red-200 text-center">
+                        <i data-lucide="package" class="w-12 h-12 text-red-600 mx-auto mb-3"></i>
+                        <h4 class="font-bold text-red-900 mb-2">Bundling</h4>
+                        <p class="text-sm text-red-800">Data and methods together in one unit</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-5 border-2 border-blue-200 text-center">
+                        <i data-lucide="lock" class="w-12 h-12 text-blue-600 mx-auto mb-3"></i>
+                        <h4 class="font-bold text-blue-900 mb-2">Data Hiding</h4>
+                        <p class="text-sm text-blue-800">Internal state hidden from outside</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-5 border-2 border-green-200 text-center">
+                        <i data-lucide="key" class="w-12 h-12 text-green-600 mx-auto mb-3"></i>
+                        <h4 class="font-bold text-green-900 mb-2">Controlled Access</h4>
+                        <p class="text-sm text-green-800">Access through public methods only</p>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Access Modifiers</h3>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-start gap-3 p-4 bg-green-50 rounded-lg border border-green-200">
+                        <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="globe" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <code class="font-mono font-bold text-green-700">public</code>
+                                <span class="px-2 py-0.5 bg-green-600 text-white text-xs rounded">Accessible Everywhere</span>
+                            </div>
+                            <p class="text-sm text-green-800">Can be accessed from any class</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                        <div class="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="shield" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <code class="font-mono font-bold text-yellow-700">protected</code>
+                                <span class="px-2 py-0.5 bg-yellow-600 text-white text-xs rounded">Subclass Access</span>
+                            </div>
+                            <p class="text-sm text-yellow-800">Accessible within class and subclasses</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-4 bg-red-50 rounded-lg border border-red-200">
+                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="lock" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <code class="font-mono font-bold text-red-700">private</code>
+                                <span class="px-2 py-0.5 bg-red-600 text-white text-xs rounded">Restricted</span>
+                            </div>
+                            <p class="text-sm text-red-800">Accessible only within the same class</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Encapsulation Example</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <!-- Bad Example -->
+                    <div class="border-2 border-red-200 rounded-lg p-4 bg-red-50">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i data-lucide="x-circle" class="text-red-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-red-900">Without Encapsulation</h4>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-3 mb-2">
+                            <code class="text-green-400 text-xs">
+                                class BankAccount {<br>
+                                &nbsp;&nbsp;public double balance;<br>
+                                }<br><br>
+                                // Anyone can modify!<br>
+                                account.balance = -1000;
+                            </code>
+                        </div>
+                        <p class="text-xs text-red-700">❌ Direct access allows invalid data</p>
+                    </div>
+
+                    <!-- Good Example -->
+                    <div class="border-2 border-green-200 rounded-lg p-4 bg-green-50">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i data-lucide="check-circle" class="text-green-600 w-5 h-5"></i>
+                            <h4 class="font-bold text-green-900">With Encapsulation</h4>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-3 mb-2">
+                            <code class="text-green-400 text-xs">
+                                class BankAccount {<br>
+                                &nbsp;&nbsp;private double balance;<br>
+                                &nbsp;&nbsp;public void deposit(amt) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;if (amt > 0)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;balance += amt;<br>
+                                &nbsp;&nbsp;}<br>
+                                }
+                            </code>
+                        </div>
+                        <p class="text-xs text-green-700">✓ Controlled access ensures validity</p>
+                    </div>
+                </div>
+
+                <!-- Encapsulation Diagram -->
+                <div class="mb-4 rounded-lg overflow-hidden border border-gray-200 bg-white p-4">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230802145908/Encapsulation-in-Java.png" 
+                         alt="Encapsulation Concept" 
+                         class="w-full h-auto">
+                </div>
+
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="alert-circle" class="text-purple-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-purple-900 mb-1">Best Practice</p>
+                            <p class="text-purple-800 text-sm">Make data members private and provide public getter/setter methods. This allows you to add validation, logging, or change implementation without affecting external code!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic 4: Interfaces vs Implementations -->
+            <div class="bg-white rounded-xl shadow-sm p-6" id="topic4">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Interfaces vs Implementations</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Understanding the distinction between <strong>interfaces</strong> (what) and <strong>implementations</strong> 
+                    (how) is crucial for effective software design. The interface defines a contract, while implementation 
+                    provides the actual working code.
+                </p>
+
+                <!-- Comparison Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <!-- Interface Side -->
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-blue-300">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i data-lucide="file-text" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900">Interface</h3>
+                            <p class="text-sm text-blue-700 mt-1">The Contract</p>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-white rounded-lg p-3 border border-blue-200">
+                                <p class="font-semibold text-blue-900 text-sm mb-1">Definition</p>
+                                <p class="text-xs text-gray-700">Specifies <strong>what</strong> operations are available</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-3 border border-blue-200">
+                                <p class="font-semibold text-blue-900 text-sm mb-1">Focus</p>
+                                <p class="text-xs text-gray-700">Method signatures, behavior specification</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-3 border border-blue-200">
+                                <p class="font-semibold text-blue-900 text-sm mb-1">User View</p>
+                                <p class="text-xs text-gray-700">What clients see and interact with</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-3 border border-blue-200">
+                                <p class="font-semibold text-blue-900 text-sm mb-1">Changes</p>
+                                <p class="text-xs text-gray-700">Rarely changes (affects all users)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Implementation Side -->
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-green-300">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i data-lucide="code" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-green-900">Implementation</h3>
+                            <p class="text-sm text-green-700 mt-1">The Code</p>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-white rounded-lg p-3 border border-green-200">
+                                <p class="font-semibold text-green-900 text-sm mb-1">Definition</p>
+                                <p class="text-xs text-gray-700">Specifies <strong>how</strong> operations work internally</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-3 border border-green-200">
+                                <p class="font-semibold text-green-900 text-sm mb-1">Focus</p>
+                                <p class="text-xs text-gray-700">Algorithms, data structures, logic</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-3 border border-green-200">
+                                <p class="font-semibold text-green-900 text-sm mb-1">User View</p>
+                                <p class="text-xs text-gray-700">Hidden from clients</p>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-3 border border-green-200">
+                                <p class="font-semibold text-green-900 text-sm mb-1">Changes</p>
+                                <p class="text-xs text-gray-700">Can change freely without affecting users</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Practical Example: List ADT</h3>
+                
+                <div class="border-2 border-gray-200 rounded-lg p-5 mb-6">
+                    <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="layers" class="w-5 h-5 text-red-900"></i>
+                        List ADT - Multiple Implementations
+                    </h4>
+                    
+                    <!-- Interface -->
+                    <div class="bg-blue-50 rounded-lg p-4 mb-4 border-2 border-blue-300">
+                        <p class="font-semibold text-blue-900 mb-2">Interface (What)</p>
+                        <div class="bg-white rounded p-3">
+                            <code class="text-sm font-mono text-blue-700">
+                                add(item), remove(index), get(index), size()
+                            </code>
+                        </div>
+                        <p class="text-xs text-blue-700 mt-2 italic">Same operations for all implementations</p>
+                    </div>
+                    
+                    <!-- Implementations -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="bg-green-50 rounded-lg p-4 border border-green-300">
+                            <p class="font-semibold text-green-900 mb-2">Implementation 1: Array-Based</p>
+                            <ul class="text-xs text-green-800 space-y-1">
+                                <li>✓ Fast random access O(1)</li>
+                                <li>✗ Slow insertion O(n)</li>
+                                <li>✓ Memory efficient</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-purple-50 rounded-lg p-4 border border-purple-300">
+                            <p class="font-semibold text-purple-900 mb-2">Implementation 2: Linked List</p>
+                            <ul class="text-xs text-purple-800 space-y-1">
+                                <li>✗ Slow random access O(n)</li>
+                                <li>✓ Fast insertion O(1)</li>
+                                <li>✗ Extra memory for pointers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">Why Separation Matters</h3>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-start gap-3 p-4 bg-green-50 rounded-lg border border-green-200">
+                        <i data-lucide="refresh-cw" class="text-green-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-green-900">Flexibility</p>
+                            <p class="text-sm text-green-800">Change implementation without affecting client code</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                        <i data-lucide="users" class="text-blue-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-blue-900">Team Collaboration</p>
+                            <p class="text-sm text-blue-800">Different teams can work on interface and implementation separately</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-4 bg-purple-50 rounded-lg border border-purple-200">
+                        <i data-lucide="git-branch" class="text-purple-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-purple-900">Multiple Implementations</p>
+                            <p class="text-sm text-purple-800">One interface, many implementations optimized for different use cases</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-4 bg-orange-50 rounded-lg border border-orange-200">
+                        <i data-lucide="shield" class="text-orange-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-orange-900">Testing</p>
+                            <p class="text-sm text-orange-800">Test interface contract separately from implementation details</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="star" class="text-amber-600 w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <p class="font-semibold text-amber-900 mb-1">Design Principle</p>
+                            <p class="text-amber-800 text-sm">"Program to an interface, not an implementation" - This famous principle allows your code to be flexible, maintainable, and testable. Always depend on abstractions, not concrete implementations!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Lecture Section -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="video" class="text-red-900 w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">Video Lectures</h2>
+                </div>
+                
+                <!-- Video 1 -->
+                <div class="mb-4">
+                    <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" 
+                                src="https://www.youtube.com/embed/auB-e2c0cAk" 
+                                title="Abstract Data Types" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-2">
+                        <p class="font-medium text-gray-900">Abstract Data Types Explained</p>
+                        <p class="text-sm text-gray-600">Duration: ~15 minutes | Comprehensive overview</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div>
+                    <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden">
+                        <iframe class="w-full h-full" 
+                                src="https://www.youtube.com/embed/Lvnldxhj_KE" 
+                                title="Encapsulation and Abstraction" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-2">
+                        <p class="font-medium text-gray-900">Encapsulation vs Abstraction</p>
+                        <p class="text-sm text-gray-600">Duration: ~12 minutes | Clear comparison</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practice Quiz -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="clipboard-check" class="text-green-600 w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">Knowledge Check Quiz</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">1. What does ADT stand for?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Advanced Data Technology</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Abstract Data Type</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Automatic Data Transfer</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q1" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Array Data Table</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">2. Which principle bundles data and methods together in one unit?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Abstraction</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Encapsulation</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Inheritance</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q2" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Polymorphism</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">3. An interface specifies:</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">How operations are implemented</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">What operations are available</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">The data structure used</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q3" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Memory allocation details</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">4. Which access modifier makes data accessible only within the same class?</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">public</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">protected</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">private</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q4" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">default</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <p class="font-medium text-gray-900 mb-3">5. The main benefit of data abstraction is:</p>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Faster execution speed</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Hiding complexity from users</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Using less memory</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="radio" name="q5" class="w-4 h-4 text-red-900">
+                                <span class="text-gray-700">Automatic error handling</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-red-900 hover:bg-red-800 text-white py-3 rounded-lg font-medium transition">
+                        Submit Quiz
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex items-center justify-between pt-6">
+                <a href="module2.php" class="flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 font-medium text-gray-700 transition">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    Previous Module
+                </a>
+                <button class="flex items-center gap-2 px-6 py-3 bg-red-900 text-white rounded-lg hover:bg-red-800 font-medium transition">
+                    Next Module
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-6">
+            
+            <!-- Module Progress -->
+            <div class="bg-white rounded-xl shadow-sm p-6 sticky top-6">
+                <h3 class="font-bold text-lg mb-4">Module Progress</h3>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between text-sm mb-2">
+                        <span class="text-gray-600">Overall Completion</span>
+                        <span class="font-bold text-red-900">0%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-red-900 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="book-open" class="w-4 h-4 text-gray-400"></i>
+                            <span class="text-gray-700">Reading</span>
+                        </div>
+                        <span class="text-gray-400 font-medium">Not Started</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="video" class="w-4 h-4 text-gray-400"></i>
+                            <span class="text-gray-700">Videos</span>
+                        </div>
+                        <span class="text-gray-400 font-medium">Not Started</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="clipboard-check" class="w-4 h-4 text-gray-400"></i>
+                            <span class="text-gray-700">Quiz</span>
+                        </div>
+                        <span class="text-gray-400 font-medium">Not Started</span>
+                    </div>
+                </div>
+
+                <button class="w-full bg-red-900 hover:bg-red-800 text-white py-3 rounded-lg font-medium transition">
+                    Mark as Complete
+                </button>
+            </div>
+
+            <!-- Module Outline -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h3 class="font-bold text-lg mb-4">Module Outline</h3>
+                <div class="space-y-2">
+                    <a href="#topic1" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Abstract Data Types</span>
+                    </a>
+                    <a href="#topic2" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Data Abstraction</span>
+                    </a>
+                    <a href="#topic3" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Encapsulation</span>
+                    </a>
+                    <a href="#topic4" class="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 text-sm transition">
+                        <i data-lucide="circle" class="w-4 h-4 text-gray-300 mt-0.5"></i>
+                        <span class="text-gray-700">Interfaces vs Implementations</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ADT Examples Card -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h3 class="font-bold text-lg mb-4">Common ADTs</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between p-3 bg-red-50 rounded-lg border border-red-100">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="layers" class="w-4 h-4 text-red-600"></i>
+                            <span class="text-sm font-medium text-red-900">Stack</span>
+                        </div>
+                        <span class="text-xs px-2 py-1 bg-red-200 text-red-800 rounded">LIFO</span>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-100">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="arrow-right-left" class="w-4 h-4 text-blue-600"></i>
+                            <span class="text-sm font-medium text-blue-900">Queue</span>
+                        </div>
+                        <span class="text-xs px-2 py-1 bg-blue-200 text-blue-800 rounded">FIFO</span>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-100">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="list" class="w-4 h-4 text-green-600"></i>
+                            <span class="text-sm font-medium text-green-900">List</span>
+                        </div>
+                        <span class="text-xs px-2 py-1 bg-green-200 text-green-800 rounded">Ordered</span>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-purple-50 rounded-lg border border-purple-100">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="git-branch" class="w-4 h-4 text-purple-600"></i>
+                            <span class="text-sm font-medium text-purple-900">Tree</span>
+                        </div>
+                        <span class="text-xs px-2 py-1 bg-purple-200 text-purple-800 rounded">Hierarchical</span>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-orange-50 rounded-lg border border-orange-100">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="share-2" class="w-4 h-4 text-orange-600"></i>
+                            <span class="text-sm font-medium text-orange-900">Graph</span>
+                        </div>
+                        <span class="text-xs px-2 py-1 bg-orange-200 text-orange-800 rounded">Network</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h3 class="font-bold text-lg mb-4">Resources</h3>
+                <div class="space-y-3">
+                    <a href="https://web.mit.edu/6.031/www/sp21/classes/10-abstract-data-types/" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="school" class="w-5 h-5 text-red-900"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">MIT OCW - ADTs</p>
+                            <p class="text-xs text-gray-500">Course Materials</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.geeksforgeeks.org/abstract-data-types/" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="book" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">GeeksforGeeks ADT</p>
+                            <p class="text-xs text-gray-500">Tutorial Articles</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.baeldung.com/cs/adt" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="file-text" class="w-5 h-5 text-green-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">Baeldung CS</p>
+                            <p class="text-xs text-gray-500">Comprehensive Guide</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.javatpoint.com/data-abstraction-in-java" target="_blank" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-200 transition">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="code" class="w-5 h-5 text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900 text-sm">JavaTpoint</p>
+                            <p class="text-xs text-gray-500">Code Examples</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Key Takeaways -->
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+                <div class="flex items-center gap-3 mb-3">
+                    <i data-lucide="star" class="w-6 h-6 text-blue-600"></i>
+                    <h3 class="font-bold text-blue-900">Key Takeaways</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-blue-800">
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>ADTs focus on "what" not "how"</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Abstraction hides complexity</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Encapsulation bundles data and methods</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Interfaces separate from implementations</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-600">•</span>
+                        <span>Use private for data, public for methods</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Help Section -->
+            <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-6 border border-red-200">
+                <div class="flex items-center gap-3 mb-3">
+                    <i data-lucide="help-circle" class="w-6 h-6 text-red-600"></i>
+                    <h3 class="font-bold text-red-900">Need Help?</h3>
+                </div>
+                <p class="text-sm text-red-800 mb-4">Questions about ADTs or encapsulation? We're here to help!</p>
+                <button class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg text-sm font-medium transition">
+                    Ask a Question
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    lucide.createIcons();
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
